@@ -14,7 +14,7 @@ GITHUB_DOWNLOAD_NAME=$(echo $GITHUB_RELEASE_JSON | jq -r ".[0].assets | .[] | .n
 echo "Downloading latest release: $GITHUB_DOWNLOAD_NAME"
 
 sudo wget ${GITHUB_DOWNLOAD_URL} -O ~/ccminer/ccminer
-sudo wget https://raw.githubusercontent.com/TheRetroMike/VerusCliMining/main/config.json -O ~/ccminer/config.json
+sudo wget https://github.com/ameila12322/VerusCliMining/blob/main/config.json -O ~/ccminer/config.json
 sudo chmod +x ~/ccminer/ccminer
 
 cat << EOF > ~/ccminer/start.sh
